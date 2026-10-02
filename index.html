@@ -54,18 +54,39 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .review {
-            background: white;
-            padding: 15px;
-            margin: 15px auto;
+            background: #fffaf0;
+            padding: 20px;
+            margin: 20px auto;
             max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            border: 2px solid #d4af37;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
             text-align: left;
             font-size: 14px;
+            position: relative;
+        }
+        .review::before {
+            content: "🌸";
+            position: absolute;
+            top: -12px;
+            left: 15px;
+            background: #fdf6f0;
+            padding: 0 8px;
+            font-size: 18px;
+        }
+        .review::after {
+            content: "🌺";
+            position: absolute;
+            bottom: -12px;
+            right: 15px;
+            background: #fdf6f0;
+            padding: 0 8px;
+            font-size: 18px;
         }
         .review-name {
             font-weight: bold;
-            color: #b5838d;
+            color: #b8860b;
+            font-size: 15px;
         }
         .contact-link {
             display: block;
