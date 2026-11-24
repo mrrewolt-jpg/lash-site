@@ -103,6 +103,21 @@
             margin: 15px auto;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
+        .map-buttons {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .map-btn {
+            padding: 8px 14px;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
         .disclaimer {
             font-size: 12px;
             color: #8a7367;
@@ -162,7 +177,11 @@
 
     <h2>Контакты</h2>
     <div class="address">
-        <p><strong>Адрес (Адлер):</strong><br>ул. Демократическая 38А,<br>7 кабинет, 4 этаж</p>
+        <p style="margin-top: 0;"><strong>Адрес (Адлер):</strong><br>ул. Демократическая 38А,<br>7 кабинет, 4 этаж</p>
+        <div class="map-buttons">
+            <a href="https://yandex.ru" target="_blank" rel="noopener noreferrer" class="map-btn" style="background: #fc3f1d;">📍 Яндекс.Карты</a>
+            <a href="https://2gis.ru" target="_blank" rel="noopener noreferrer" class="map-btn" style="background: #19b000;">🗺️ 2ГИС</a>
+        </div>
     </div>
     <p><strong>Телефон:</strong><br><a href="tel:+79322532650" class="contact-link">+7 932 253-26-50</a></p>
     <a href="https://vk.ru" class="contact-link" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
