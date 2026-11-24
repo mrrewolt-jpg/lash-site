@@ -5,95 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Чечина Татьяна — наращивание ресниц, брови, татуаж | Адлер</title>
     <style>
-        body { font-family: 'Georgia', serif; background-color: #fdf6f0; color: #4a3b32; margin: 0; padding: 0; text-align: center; line-height: 1.6; }
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #fdf6f0; 
+            background-image: linear-gradient(135deg, #fdf6f0 0%, #f4e6e6 100%);
+            color: #4a3b32; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+            line-height: 1.6; 
+        }
         
         /* Стили для шапки с картинкой */
         .hero {
             position: relative;
             width: 100%;
-            height: 400px;
-            background-image: url('header.png'); /* ЗАМЕНИ НА СВОЁ НАЗВАНИЕ, ЕСЛИ НУЖНО */
+            height: 450px;
+            background-image: url('avatar.jpg'); /* Название твоего нового фото */
             background-size: cover;
-            background-position: center;
+            background-position: center 20%; /* Центрируем фото так, чтобы лицо было видно */
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center; /* Текст по центру */
             color: white;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
         }
         
-        /* Затемнение слева, чтобы текст читался */
+        /* Затемнение, чтобы текст читался на любом фоне */
         .hero::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 70%);
+            background: rgba(0,0,0,0.5); /* Полупрозрачное затемнение */
             z-index: 1;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 20px 40px;
-            text-align: left;
+            padding: 20px;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 36px;
-            margin: 0 0 5px 0;
+            font-size: 42px;
+            margin: 0 0 10px 0;
             color: #fff;
             font-family: 'Georgia', serif;
             letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 16px;
-            margin: 2px 0;
+            font-size: 18px;
+            margin: 3px 0;
             color: #fdf6f0;
         }
         
         .hero .subtitle-big {
-            font-size: 22px;
+            font-size: 24px;
             font-style: italic;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: #d4af37;
         }
 
-        /* Общие стили (контент) */
-        .container { padding: 20px; max-width: 800px; margin: 0 auto; text-align: center; }
+        /* Основной контейнер */
+        .container { padding: 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+        
         h2 { color: #b5838d; border-bottom: 2px solid #e8c4c4; padding-bottom: 5px; margin-top: 40px; font-family: 'Georgia', serif; }
+        
+        /* БЛОК УСЛУГ (ДВЕ КОЛОНКИ) */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .services-image {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .services-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%; /* Делаем фото круглым */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 5px solid #f4e6e6; /* Рамка вокруг */
+        }
+
+        .services-list {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .services-list h2 {
+            margin-top: 0;
+            text-align: left;
+            border-bottom: none;
+        }
+
+        .services-list ul { list-style: none; padding: 0; margin: 0; }
+        .services-list li { 
+            padding: 15px 0; 
+            border-bottom: 1px dashed #e8c4c4; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            font-size: 16px;
+        }
+        .services-list li:last-child { border-bottom: none; }
+        .services-list .price { font-weight: bold; color: #b5838d; font-size: 18px; }
+
         .btn { display: inline-block; padding: 15px 35px; background-color: #b5838d; color: white; text-decoration: none; border-radius: 30px; font-size: 18px; margin-top: 20px; font-weight: bold; transition: background-color 0.3s ease; }
         .btn:hover { background-color: #9e6b77; }
-        ul { list-style: none; padding: 0; }
-        li { padding: 12px; background: white; margin: 10px auto; max-width: 350px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         
-        .review { background: #fffaf0; padding: 20px; margin: 20px auto; max-width: 500px; border-radius: 15px; border: 2px solid #d4af37; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2); text-align: left; font-size: 14px; position: relative; }
-        .review::before { content: "🌸"; position: absolute; top: -12px; left: 15px; background: #fdf6f0; padding: 0 8px; font-size: 18px; }
-        .review::after { content: "🌺"; position: absolute; bottom: -12px; right: 15px; background: #fdf6f0; padding: 0 8px; font-size: 18px; }
-        .review-name { font-weight: bold; color: #b8860b; font-size: 15px; }
+        .review { background: white; padding: 20px; margin: 20px auto; max-width: 500px; border-radius: 15px; border: 1px solid #e8c4c4; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; font-size: 14px; position: relative; }
+        .review-name { font-weight: bold; color: #b8860b; font-size: 15px; margin-top: 0; }
         
         .contact-link { display: block; margin: 8px 0; color: #b5838d; text-decoration: none; font-size: 16px; }
-        .address { background: white; padding: 15px; border-radius: 10px; max-width: 350px; margin: 15px auto; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .address img { width: 100%; max-width: 350px; border-radius: 10px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
-        .map-buttons { margin-top: 12px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-        .map-btn { padding: 8px 14px; color: white; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: bold; transition: opacity 0.3s ease; }
-        .map-btn:hover { opacity: 0.8; }
+        .address { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: 15px auto; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .address img { width: 100%; border-radius: 10px; margin-bottom: 15px; display: block; }
+        .map-buttons { margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .map-btn { padding: 10px 18px; color: white; text-decoration: none; border-radius: 20px; font-size: 14px; font-weight: bold; }
         
-        .disclaimer { font-size: 12px; color: #8a7367; max-width: 450px; margin: 15px auto 0; }
-        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e8c4c4; font-size: 12px; color: #8a7367; line-height: 1.5; max-width: 500px; margin-left: auto; margin-right: auto; padding-bottom: 20px; }
+        .disclaimer { font-size: 12px; color: #8a7367; max-width: 600px; margin: 15px auto 0; }
+        footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #e8c4c4; font-size: 12px; color: #8a7367; line-height: 1.5; max-width: 500px; margin-left: auto; margin-right: auto; padding-bottom: 20px; }
         
         /* Галерея */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; max-width: 600px; margin: 20px auto; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; max-width: 700px; margin: 20px auto; }
         .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 
         /* Адаптив для телефонов */
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .hero { height: 350px; }
-            .hero-content { padding: 15px; }
-            .hero h1 { font-size: 28px; }
-            .hero .subtitle-big { font-size: 18px; }
-            .hero p { font-size: 14px; }
+            .hero h1 { font-size: 32px; }
+            .hero .subtitle-big { font-size: 20px; }
+            .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
+            .services-list h2 { text-align: center; }
+            .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
+            .services-image { max-width: 250px; margin: 0 auto; }
         }
     </style>
 </head>
@@ -106,20 +169,29 @@
             <p class="subtitle-big">Топ-мастер и тренер</p>
             <p>РЕСНИЦЫ • БРОВИ • ПЕРМАНЕНТ</p>
             <p>ОБУЧЕНИЕ</p>
-            <p style="margin-top: 10px; font-size: 14px;">📍 АДЛЕР / НИЖНЕВАРТОВСК</p>
+            <p style="margin-top: 10px; font-size: 16px;">📍 АДЛЕР / НИЖНЕВАРТОВСК</p>
         </div>
     </header>
 
     <div class="container">
         
-        <h2>Услуги и цены</h2>
-        <ul>
-            <li>Классическое наращивание — 2300 ₽</li>
-            <li>2D наращивание — 3000 ₽</li>
-            <li>3D наращивание — 3300 ₽</li>
-            <li>Коррекция бровей — от 600 ₽</li>
-            <li>Косметический татуаж — 7000 ₽</li>
-        </ul>
+        <!-- БЛОК УСЛУГ (ФОТО + ЦЕНЫ) -->
+        <div class="services-grid">
+            <div class="services-image">
+                <!-- Фото слева. Если поменяешь название файла, замени здесь -->
+                <img src="avatar.jpg" alt="Чечина Татьяна">
+            </div>
+            <div class="services-list">
+                <h2>Услуги и цены</h2>
+                <ul>
+                    <li>Классическое наращивание <span class="price">2300 ₽</span></li>
+                    <li>2D наращивание <span class="price">3000 ₽</span></li>
+                    <li>3D наращивание <span class="price">3300 ₽</span></li>
+                    <li>Коррекция бровей <span class="price">от 600 ₽</span></li>
+                    <li>Косметический татуаж <span class="price">7000 ₽</span></li>
+                </ul>
+            </div>
+        </div>
         <p class="disclaimer">
             * Указанные цены носят ознакомительный характер и не являются публичной офертой (ст. 437 ГК РФ). Услуги носят эстетический (бытовой) характер и не являются медицинскими.
         </p>
