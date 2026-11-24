@@ -87,13 +87,46 @@
             max-width: 800px;
         }
 
-        .services-image { flex: 1; min-width: 250px; max-width: 300px; text-align: center; }
-        .services-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-            border: 4px solid #d4af37; /* Золотая рамка */
-        }
+     /* Свайп-карусель фото и видео */
+     .services-carousel {
+         flex: 1;
+         min-width: 240px;
+         max-width: 300px;
+         margin: 0 auto;
+     }
+     .carousel-track {
+         display: flex;
+         overflow-x: auto;
+         scroll-snap-type: x mandatory;
+         scroll-behavior: smooth;
+         gap: 12px;
+         border-radius: 15px;
+         border: 3px solid #d4af37;
+         background: #121212;
+         scrollbar-width: none;
+     }
+     .carousel-track::-webkit-scrollbar {
+         display: none;
+     }
+     .carousel-slide {
+         flex: 0 0 100%;
+         width: 100%;
+         height: 340px;
+         scroll-snap-align: center;
+     }
+     .carousel-slide img,
+     .carousel-slide video {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         display: block;
+     }
+     .carousel-hint {
+         font-size: 13px;
+         color: #d4af37;
+         text-align: center;
+         margin-top: 8px;
+     }
 
         .services-list { flex: 1.5; min-width: 300px; }
         .services-list h2 { margin-top: 0; border-bottom: none; text-align: left; }
@@ -188,14 +221,15 @@
         .gallery img:hover { transform: scale(1.05); border-color: #d4af37; }
 
         /* Адаптив */
-        @media (max-width: 700px) {
-            .hero { height: 350px; }
-            .hero h1 { font-size: 32px; }
-            .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
-            .services-list h2 { text-align: center; }
-            .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
-            .services-image { max-width: 200px; margin: 0 auto; }
-        }
+     @media (max-width: 700px) {
+         .hero { height: 350px; }
+         .hero h1 { font-size: 32px; }
+         .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
+         .services-list h2 { text-align: center; }
+         .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
+         .services-carousel { max-width: 260px; margin: 0 auto; }
+     }
+
     </style>
 </head>
 <body>
@@ -216,9 +250,24 @@
         
         <!-- УСЛУГИ -->
         <div class="services-grid">
-            <div class="services-image">
-                <img src="avatar.jpg" alt="Чечина Татьяна">
-            </div>
+         <div class="services-carousel">
+             <div class="carousel-track">
+                 <div class="carousel-slide">
+                     <img src="slide1.jpg" alt="Чечина Татьяна">
+                 </div>
+                 <div class="carousel-slide">
+                     <video src="slide2.mp4" poster="1.jpg" controls playsinline muted preload="metadata"></video>
+                 </div>
+                 <div class="carousel-slide">
+                     <video src="slide3.mp4" poster="2.jpg" controls playsinline muted preload="metadata"></video>
+                 </div>
+                 <div class="carousel-slide">
+                     <video src="slide4.mp4" poster="3.jpg" controls playsinline muted preload="metadata"></video>
+                 </div>
+             </div>
+             <div class="carousel-hint">👈 Листайте фото и видео пальцем 👉</div>
+         </div>
+
             <div class="services-list">
                 <h2>Услуги и цены</h2>
                 <ul>
