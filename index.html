@@ -5,153 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Чечина Татьяна — наращивание ресниц, брови, татуаж | Адлер</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fdf6f0;
-            color: #4a3b32;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #b5838d;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-        h2 {
-            color: #b5838d;
-            border-bottom: 2px solid #e8c4c4;
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
-        .subtitle {
-            font-size: 15px;
-            color: #8a7367;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            background-color: #b5838d;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 18px;
-            margin-top: 20px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #9e6b77;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            padding: 12px;
-            background: white;
-            margin: 10px auto;
-            max-width: 350px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .review {
-            background: #fffaf0;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-            border-radius: 15px;
-            border: 2px solid #d4af37;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
-            text-align: left;
-            font-size: 14px;
-            position: relative;
-        }
-        .review::before {
-            content: "🌸";
-            position: absolute;
-            top: -12px;
-            left: 15px;
-            background: #fdf6f0;
-            padding: 0 8px;
-            font-size: 18px;
-        }
-        .review::after {
-            content: "🌺";
-            position: absolute;
-            bottom: -12px;
-            right: 15px;
-            background: #fdf6f0;
-            padding: 0 8px;
-            font-size: 18px;
-        }
-        .review-name {
-            font-weight: bold;
-            color: #b8860b;
-            font-size: 15px;
-        }
-        .contact-link {
-            display: block;
-            margin: 8px 0;
-            color: #b5838d;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .address {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 350px;
-            margin: 15px auto;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .address img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .map-buttons {
-            margin-top: 12px;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .map-btn {
-            padding: 8px 14px;
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            transition: opacity 0.3s ease;
-        }
-        .map-btn:hover {
-            opacity: 0.8;
-        }
-        .disclaimer {
-            font-size: 12px;
-            color: #8a7367;
-            max-width: 450px;
-            margin: 15px auto 0;
-        }
-        footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e8c4c4;
-            font-size: 12px;
-            color: #8a7367;
-            line-height: 1.5;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        body { font-family: Arial, sans-serif; background-color: #fdf6f0; color: #4a3b32; margin: 0; padding: 20px; text-align: center; line-height: 1.6; }
+        h1 { color: #b5838d; font-size: 28px; margin-bottom: 5px; }
+        h2 { color: #b5838d; border-bottom: 2px solid #e8c4c4; padding-bottom: 5px; margin-top: 40px; }
+        .subtitle { font-size: 15px; color: #8a7367; margin-bottom: 20px; }
+        .btn { display: inline-block; padding: 15px 35px; background-color: #b5838d; color: white; text-decoration: none; border-radius: 30px; font-size: 18px; margin-top: 20px; font-weight: bold; transition: background-color 0.3s ease; }
+        .btn:hover { background-color: #9e6b77; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 12px; background: white; margin: 10px auto; max-width: 350px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .review { background: #fffaf0; padding: 20px; margin: 20px auto; max-width: 500px; border-radius: 15px; border: 2px solid #d4af37; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2); text-align: left; font-size: 14px; position: relative; }
+        .review::before { content: "🌸"; position: absolute; top: -12px; left: 15px; background: #fdf6f0; padding: 0 8px; font-size: 18px; }
+        .review::after { content: "🌺"; position: absolute; bottom: -12px; right: 15px; background: #fdf6f0; padding: 0 8px; font-size: 18px; }
+        .review-name { font-weight: bold; color: #b8860b; font-size: 15px; }
+        .contact-link { display: block; margin: 8px 0; color: #b5838d; text-decoration: none; font-size: 16px; }
+        .address { background: white; padding: 15px; border-radius: 10px; max-width: 350px; margin: 15px auto; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .address img { width: 100%; max-width: 350px; border-radius: 10px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+        .map-buttons { margin-top: 12px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .map-btn { padding: 8px 14px; color: white; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: bold; transition: opacity 0.3s ease; }
+        .map-btn:hover { opacity: 0.8; }
+        .disclaimer { font-size: 12px; color: #8a7367; max-width: 450px; margin: 15px auto 0; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e8c4c4; font-size: 12px; color: #8a7367; line-height: 1.5; max-width: 500px; margin-left: auto; margin-right: auto; }
     </style>
 </head>
 <body>
@@ -174,6 +47,10 @@
     <h2>Записаться онлайн</h2>
     <p>Выберите удобное время — это займёт минуту.</p>
     <a href="https://dikidi.net/ru/profile/chechina_tatyana_316741/" class="btn" target="_blank" rel="noopener noreferrer">Записаться</a>
+
+    <h2>Мои работы</h2>
+    <p>Посмотрите мои последние работы и результаты преображений.</p>
+    <a href="https://vk.ru/clips/chechina.tatyana" class="btn" target="_blank" rel="noopener noreferrer" style="background-color: #4a76a8;">Смотреть работы</a>
 
     <h2>Отзывы</h2>
     <div class="review">
@@ -204,7 +81,6 @@
     <p><strong>Телефон:</strong><br><a href="tel:+79322532650" class="contact-link">+7 932 253-26-50</a></p>
     
     <a href="https://vk.ru/chechina.tatyana" class="contact-link" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
-    <!-- Кнопка MAX пока скрыта, так как нет ссылки. Если появится - раскомментируй и вставь ссылку -->
     <!-- <a href="ССЫЛКА_НА_MAX" class="contact-link" target="_blank" rel="noopener noreferrer">MAX (чат)</a> -->
 
     <footer>
