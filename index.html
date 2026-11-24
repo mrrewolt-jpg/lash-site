@@ -1,11 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чечина Татьяна — наращивание ресниц, брови, татуаж | Адлер</title>
+    <style>
+        body { font-family: 'Georgia', serif; background-color: #fdf6f0; color: #4a3b32; margin: 0; padding: 0; text-align: center; line-height: 1.6; }
+        
         /* Стили для шапки с картинкой */
         .hero {
             position: relative;
             width: 100%;
-            height: 450px; /* Сделали выше, чтобы было видно больше картинки */
+            height: 450px;
             background-image: url('header.png');
             background-size: cover;
-            background-position: top center; /* Картинка прижата к верху */
+            background-position: top center;
             display: flex;
             flex-direction: column;
             justify-content: flex-end; /* Текст прижат к низу */
@@ -14,18 +23,19 @@
             text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
         }
         
+        /* Затемнение снизу, чтобы текст читался */
         .hero::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); /* Градиент: снизу темно, сверху прозрачно */
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
             z-index: 1;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 20px 40px; /* Отступы */
+            padding: 20px 40px;
             text-align: right; /* Текст выровнен по правому краю */
         }
 
@@ -49,3 +59,130 @@
             margin-bottom: 10px;
             color: #d4af37;
         }
+
+        /* Общие стили (контент) */
+        .container { padding: 20px; max-width: 800px; margin: 0 auto; text-align: center; }
+        h2 { color: #b5838d; border-bottom: 2px solid #e8c4c4; padding-bottom: 5px; margin-top: 40px; font-family: 'Georgia', serif; }
+        .btn { display: inline-block; padding: 15px 35px; background-color: #b5838d; color: white; text-decoration: none; border-radius: 30px; font-size: 18px; margin-top: 20px; font-weight: bold; transition: background-color 0.3s ease; }
+        .btn:hover { background-color: #9e6b77; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 12px; background: white; margin: 10px auto; max-width: 350px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        
+        .review { background: #fffaf0; padding: 20px; margin: 20px auto; max-width: 500px; border-radius: 15px; border: 2px solid #d4af37; box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2); text-align: left; font-size: 14px; position: relative; }
+        .review::before { content: "🌸"; position: absolute; top: -12px; left: 15px; background: #fdf6f0; padding: 0 8px; font-size: 18px; }
+        .review::after { content: "🌺"; position: absolute; bottom: -12px; right: 15px; background: #fdf6f0; padding: 0 8px; font-size: 18px; }
+        .review-name { font-weight: bold; color: #b8860b; font-size: 15px; }
+        
+        .contact-link { display: block; margin: 8px 0; color: #b5838d; text-decoration: none; font-size: 16px; }
+        .address { background: white; padding: 15px; border-radius: 10px; max-width: 350px; margin: 15px auto; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .address img { width: 100%; max-width: 350px; border-radius: 10px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto; }
+        .map-buttons { margin-top: 12px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .map-btn { padding: 8px 14px; color: white; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: bold; transition: opacity 0.3s ease; }
+        .map-btn:hover { opacity: 0.8; }
+        
+        .disclaimer { font-size: 12px; color: #8a7367; max-width: 450px; margin: 15px auto 0; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e8c4c4; font-size: 12px; color: #8a7367; line-height: 1.5; max-width: 500px; margin-left: auto; margin-right: auto; padding-bottom: 20px; }
+        
+        /* Галерея */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; max-width: 600px; margin: 20px auto; }
+        .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        /* Адаптив для телефонов */
+        @media (max-width: 600px) {
+            .hero { height: 350px; }
+            .hero-content { padding: 15px; }
+            .hero h1 { font-size: 28px; }
+            .hero .subtitle-big { font-size: 18px; }
+            .hero p { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Чечина Татьяна</h1>
+            <p class="subtitle-big">Топ-мастер и тренер</p>
+            <p>РЕСНИЦЫ • БРОВИ • ПЕРМАНЕНТ</p>
+            <p>ОБУЧЕНИЕ</p>
+            <p style="margin-top: 10px; font-size: 14px;">📍 АДЛЕР / НИЖНЕВАРТОВСК</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <h2>Услуги и цены</h2>
+        <ul>
+            <li>Классическое наращивание — 2300 ₽</li>
+            <li>2D наращивание — 3000 ₽</li>
+            <li>3D наращивание — 3300 ₽</li>
+            <li>Коррекция бровей — от 600 ₽</li>
+            <li>Косметический татуаж — 7000 ₽</li>
+        </ul>
+        <p class="disclaimer">
+            * Указанные цены носят ознакомительный характер и не являются публичной офертой (ст. 437 ГК РФ). Услуги носят эстетический (бытовой) характер и не являются медицинскими.
+        </p>
+
+        <h2>Записаться онлайн</h2>
+        <p>Выберите удобное время — это займёт минуту.</p>
+        <a href="https://dikidi.net/ru/profile/chechina_tatyana_316741/" class="btn" target="_blank" rel="noopener noreferrer">Записаться</a>
+
+        <h2>Мои работы</h2>
+        <p>Посмотрите мои последние работы и результаты преображений.</p>
+        
+        <div class="gallery">
+            <img src="1.jpg" alt="Работа 1">
+            <img src="2.jpg" alt="Работа 2">
+            <img src="3.jpg" alt="Работа 3">
+            <img src="4.jpg" alt="Работа 4">
+            <img src="5.jpg" alt="Работа 5">
+            <img src="6.jpg" alt="Работа 6">
+            <img src="7.jpg" alt="Работа 7">
+            <img src="8.jpg" alt="Работа 8">
+        </div>
+
+        <a href="https://vk.ru/clips/chechina.tatyana" class="btn" target="_blank" rel="noopener noreferrer" style="background-color: #4a76a8; margin-top: 10px;">Смотреть все работы</a>
+
+        <h2>Отзывы</h2>
+        <div class="review">
+            <p class="review-name">Наталья</p>
+            <p>Татьяна профессионал своего дела 🔥 реснички получились супер, была первый раз — осталась ооочень довольна 👍 Теперь только к Татьяне!</p>
+        </div>
+        <div class="review">
+            <p class="review-name">Виктория Пащенко</p>
+            <p>Обращаюсь к Татьяне не первый раз — уже сделала перманент бровей и вернулась на ламинирование ресниц 😍 результат шикарный. Рекомендую как крутого специалиста!</p>
+        </div>
+        <div class="review">
+            <p class="review-name">Zabeivorota Valeria</p>
+            <p>Профессионал своего дела!</p>
+        </div>
+
+        <h2>График работы</h2>
+        <p>Ежедневно с 10:00 до 21:00</p>
+
+        <h2>Контакты</h2>
+        <div class="address">
+            <img src="Vhod.png" alt="Вход в салон — ул. Демократическая 38А, ТЦ «Август»">
+            <p style="margin-top: 0;"><strong>Адрес (Адлер):</strong><br>ул. Демократическая 38А,<br>7 кабинет, 4 этаж</p>
+            <div class="map-buttons">
+                <a href="https://yandex.ru/maps/239/sochi/?ll=39.924583%2C43.424300&mode=routes&rtext=~43.424010%2C39.924788&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D170297749655&z=17.97" target="_blank" rel="noopener noreferrer" class="map-btn" style="background: #fc3f1d;">📍 Яндекс.Карты</a>
+                <a href="https://2gis.ru/sochi/search/%D0%B4%D0%B5%D0%BC%D0%BE%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%2038%D0%B0/firm/70000001032162402/39.924793%2C43.424029?m=39.927878%2C43.423074%2F16" target="_blank" rel="noopener noreferrer" class="map-btn" style="background: #19b000;">🗺️ 2ГИС</a>
+            </div>
+        </div>
+        <p><strong>Телефон:</strong><br><a href="tel:+79322532650" class="contact-link">+7 932 253-26-50</a></p>
+        
+        <a href="https://vk.ru/chechina.tatyana" class="contact-link" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+
+        <footer>
+            <p style="margin: 4px 0;"><strong>ИП Чечина Татьяна Сергеевна</strong></p>
+            <p style="margin: 4px 0;">ИНН: 860336280899 · ОГРНИП: 316861700132468</p>
+            <p style="margin: 4px 0;">г. Сочи (Адлер), ул. Демократическая, д. 38А</p>
+            <p style="margin: 8px 0;">
+                Сайт носит исключительно информационный характер, не использует файлы cookie для сбора аналитики и не осуществляет сбор или хранение персональных данных посетителей (152-ФЗ). Онлайн-запись осуществляется на сторонней платформе DIKIDI.
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
