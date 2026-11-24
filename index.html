@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Чечина Татьяна — наращивание ресниц, брови, татуаж | Адлер</title>
     <style>
+        /* Подключаем красивые шрифты с засечками (как на том сайте) */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
         body { 
-            font-family: 'Georgia', serif; 
-            background-color: #fdf6f0; 
-            background-image: linear-gradient(135deg, #fdf6f0 0%, #f4e6e6 100%);
-            color: #4a3b32; 
+            font-family: 'Oswald', sans-serif; /* Строгий шрифт для основного текста */
+            background-color: #121212; /* Темный фон */
+            color: #e0e0e0; 
             margin: 0; 
             padding: 0; 
             text-align: center; 
             line-height: 1.6; 
         }
         
-        /* Стили для шапки */
+        /* Шапка */
         .hero {
             position: relative;
             width: 100%;
-            height: 380px; /* Уменьшили высоту */
+            height: 450px;
             background-image: url('avatar.jpg');
             background-size: cover;
             background-position: center 20%;
@@ -36,7 +38,7 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(18,18,18,1) 100%);
             z-index: 1;
         }
 
@@ -44,117 +46,175 @@
             position: relative;
             z-index: 2;
             padding: 20px;
-            text-align: center;
         }
 
-        .hero h1 { font-size: 42px; margin: 0 0 10px 0; color: #fff; letter-spacing: 2px; }
-        .hero p { font-size: 18px; margin: 3px 0; color: #fdf6f0; }
-        .hero .subtitle-big { font-size: 24px; font-style: italic; margin-bottom: 15px; color: #d4af37; }
+        /* Заголовки */
+        h1, h2, h3 { 
+            font-family: 'Playfair Display', serif; /* Красивый шрифт для заголовков */
+            color: #d4af37; /* Золотистый цвет */
+            margin-bottom: 10px;
+        }
+        
+        .hero h1 { font-size: 48px; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 2px; }
+        .hero .subtitle-big { font-size: 24px; font-style: italic; color: #fff; margin-bottom: 15px; }
+        .hero p { font-size: 18px; margin: 5px 0; color: #e0e0e0; text-transform: uppercase; letter-spacing: 1px;}
 
-        /* Основной контейнер */
-        .container { padding: 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+        /* Контейнер */
+        .container { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
         
-        h2 { color: #b5838d; border-bottom: 2px solid #e8c4c4; padding-bottom: 5px; margin-top: 40px; }
+        h2 { 
+            font-size: 32px; 
+            border-bottom: 2px solid #d4af37; 
+            display: inline-block;
+            padding-bottom: 5px; 
+            margin-top: 40px; 
+            text-transform: uppercase;
+        }
         
-        /* БЛОК УСЛУГ (ДВЕ КОЛОНКИ) */
+        /* Блок услуг */
         .services-grid {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* ЦЕНТРИРУЕМ БЛОК */
+            justify-content: center;
             align-items: center;
             gap: 40px;
-            margin: 30px auto 0;
-            background: white;
+            margin: 40px auto 0;
+            background: #1e1e1e; /* Темно-серый блок */
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             text-align: left;
-            max-width: 800px; /* Ограничиваем максимальную ширину */
+            max-width: 800px;
         }
 
-        .services-image {
-            flex: 1;
-            min-width: 250px;
-            max-width: 300px;
-            text-align: center;
-        }
-
+        .services-image { flex: 1; min-width: 250px; max-width: 300px; text-align: center; }
         .services-image img {
             width: 100%;
             height: auto;
             border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 5px solid #f4e6e6;
+            border: 4px solid #d4af37; /* Золотая рамка */
         }
 
-        .services-list {
-            flex: 1.5;
-            min-width: 300px;
-        }
-
-        .services-list h2 {
-            margin-top: 0;
-            text-align: left;
-            border-bottom: none;
-        }
-
+        .services-list { flex: 1.5; min-width: 300px; }
+        .services-list h2 { margin-top: 0; border-bottom: none; text-align: left; }
         .services-list ul { list-style: none; padding: 0; margin: 0; }
         .services-list li { 
             padding: 15px 0; 
-            border-bottom: 1px dashed #e8c4c4; 
+            border-bottom: 1px dashed #444; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            font-size: 16px;
+            font-size: 18px;
+            color: #fff;
         }
         .services-list li:last-child { border-bottom: none; }
-        .services-list .price { font-weight: bold; color: #b5838d; font-size: 18px; }
+        .services-list .price { font-weight: bold; color: #d4af37; font-size: 20px; }
 
-        .btn { display: inline-block; padding: 15px 35px; background-color: #b5838d; color: white; text-decoration: none; border-radius: 30px; font-size: 18px; margin-top: 20px; font-weight: bold; transition: background-color 0.3s ease; }
-        .btn:hover { background-color: #9e6b77; }
+        /* Кнопки */
+        .btn { 
+            display: inline-block; 
+            padding: 15px 40px; 
+            background-color: transparent; 
+            color: #d4af37; 
+            border: 2px solid #d4af37;
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-size: 18px; 
+            margin-top: 20px; 
+            font-weight: bold; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease; 
+        }
+        .btn:hover { background-color: #d4af37; color: #121212; }
         
-        .review { background: white; padding: 20px; margin: 20px auto; max-width: 500px; border-radius: 15px; border: 1px solid #e8c4c4; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; font-size: 14px; }
-        .review-name { font-weight: bold; color: #b8860b; font-size: 15px; margin-top: 0; }
+        .btn-vk { border-color: #4a76a8; color: #4a76a8; }
+        .btn-vk:hover { background-color: #4a76a8; color: #fff; }
+
+        /* Отзывы */
+        .review { 
+            background: #1e1e1e; 
+            padding: 25px; 
+            margin: 20px auto; 
+            max-width: 600px; 
+            border-radius: 10px; 
+            border-left: 4px solid #d4af37; 
+            text-align: left; 
+            font-size: 16px; 
+        }
+        .review-name { font-weight: bold; color: #d4af37; font-size: 18px; margin-top: 0; }
         
-        .contact-link { display: block; margin: 8px 0; color: #b5838d; text-decoration: none; font-size: 16px; }
-        .address { background: white; padding: 25px; border-radius: 15px; max-width: 400px; margin: 15px auto; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        /* Контакты */
+        .address { 
+            background: #1e1e1e; 
+            padding: 30px; 
+            border-radius: 10px; 
+            max-width: 400px; 
+            margin: 20px auto; 
+            border: 1px solid #333;
+        }
         .address img { width: 100%; border-radius: 10px; margin-bottom: 15px; display: block; }
-        .map-buttons { margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-        .map-btn { padding: 10px 18px; color: white; text-decoration: none; border-radius: 20px; font-size: 14px; font-weight: bold; }
         
-        .disclaimer { font-size: 12px; color: #8a7367; max-width: 600px; margin: 15px auto 0; }
-        footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #e8c4c4; font-size: 12px; color: #8a7367; line-height: 1.5; max-width: 500px; margin-left: auto; margin-right: auto; padding-bottom: 20px; }
+        .map-buttons { margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .map-btn { 
+            padding: 10px 18px; 
+            color: #fff; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-size: 14px; 
+            font-weight: bold; 
+            transition: opacity 0.3s;
+        }
+        .map-btn:hover { opacity: 0.8; }
+        
+        .contact-link { display: block; margin: 10px 0; color: #d4af37; text-decoration: none; font-size: 18px; transition: color 0.3s; }
+        .contact-link:hover { color: #fff; }
+        
+        .disclaimer { font-size: 12px; color: #888; max-width: 600px; margin: 20px auto 0; }
+        
+        footer { 
+            margin-top: 60px; 
+            padding: 30px 20px; 
+            border-top: 1px solid #333; 
+            font-size: 12px; 
+            color: #888; 
+            line-height: 1.5; 
+            background: #0a0a0a;
+        }
         
         /* Галерея */
         .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; max-width: 700px; margin: 20px auto; }
-        .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; border: 1px solid #333; transition: transform 0.3s; }
+        .gallery img:hover { transform: scale(1.05); border-color: #d4af37; }
 
         /* Адаптив */
         @media (max-width: 700px) {
-            .hero { height: 300px; }
+            .hero { height: 350px; }
             .hero h1 { font-size: 32px; }
-            .hero .subtitle-big { font-size: 20px; }
             .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
             .services-list h2 { text-align: center; }
             .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
-            .services-image { max-width: 250px; margin: 0 auto; }
+            .services-image { max-width: 200px; margin: 0 auto; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ШАПКА -->
     <header class="hero">
         <div class="hero-content">
             <h1>Чечина Татьяна</h1>
             <p class="subtitle-big">Топ-мастер и тренер</p>
             <p>РЕСНИЦЫ • БРОВИ • ПЕРМАНЕНТ</p>
             <p>ОБУЧЕНИЕ</p>
-            <p style="margin-top: 10px; font-size: 16px;">📍 АДЛЕР / НИЖНЕВАРТОВСК</p>
+            <p style="margin-top: 15px; font-size: 16px; color: #d4af37;">📍 АДЛЕР / НИЖНЕВАРТОВСК</p>
         </div>
     </header>
 
     <div class="container">
         
+        <!-- УСЛУГИ -->
         <div class="services-grid">
             <div class="services-image">
                 <img src="avatar.jpg" alt="Чечина Татьяна">
@@ -174,10 +234,12 @@
             * Указанные цены носят ознакомительный характер и не являются публичной офертой (ст. 437 ГК РФ). Услуги носят эстетический (бытовой) характер и не являются медицинскими.
         </p>
 
+        <!-- ЗАПИСЬ -->
         <h2>Записаться онлайн</h2>
         <p>Выберите удобное время — это займёт минуту.</p>
         <a href="https://dikidi.net/ru/profile/chechina_tatyana_316741/" class="btn" target="_blank" rel="noopener noreferrer">Записаться</a>
 
+        <!-- РАБОТЫ -->
         <h2>Мои работы</h2>
         <p>Посмотрите мои последние работы и результаты преображений.</p>
         
@@ -192,8 +254,9 @@
             <img src="8.jpg" alt="Работа 8">
         </div>
 
-        <a href="https://vk.ru/clips/chechina.tatyana" class="btn" target="_blank" rel="noopener noreferrer" style="background-color: #4a76a8; margin-top: 10px;">Смотреть все работы</a>
+        <a href="https://vk.ru/clips/chechina.tatyana" class="btn btn-vk" target="_blank" rel="noopener noreferrer" style="margin-top: 20px;">Смотреть все работы</a>
 
+        <!-- ОТЗЫВЫ -->
         <h2>Отзывы</h2>
         <div class="review">
             <p class="review-name">Наталья</p>
@@ -208,19 +271,21 @@
             <p>Профессионал своего дела!</p>
         </div>
 
+        <!-- ГРАФИК -->
         <h2>График работы</h2>
-        <p>Ежедневно с 10:00 до 21:00</p>
+        <p style="font-size: 20px; color: #fff;">Ежедневно с 10:00 до 21:00</p>
 
+        <!-- КОНТАКТЫ -->
         <h2>Контакты</h2>
         <div class="address">
             <img src="Vhod.png" alt="Вход в салон — ул. Демократическая 38А, ТЦ «Август»">
-            <p style="margin-top: 0;"><strong>Адрес (Адлер):</strong><br>ул. Демократическая 38А,<br>7 кабинет, 4 этаж</p>
+            <p style="margin-top: 0; font-size: 18px; color: #fff;"><strong>Адрес (Адлер):</strong><br>ул. Демократическая 38А,<br>7 кабинет, 4 этаж</p>
             <div class="map-buttons">
                 <a href="https://yandex.ru/maps/239/sochi/?ll=39.924583%2C43.424300&mode=routes&rtext=~43.424010%2C39.924788&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D170297749655&z=17.97" target="_blank" rel="noopener noreferrer" class="map-btn" style="background: #fc3f1d;">📍 Яндекс.Карты</a>
                 <a href="https://2gis.ru/sochi/search/%D0%B4%D0%B5%D0%BC%D0%BE%D0%BA%D1%80%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%2038%D0%B0/firm/70000001032162402/39.924793%2C43.424029?m=39.927878%2C43.423074%2F16" target="_blank" rel="noopener noreferrer" class="map-btn" style="background: #19b000;">🗺️ 2ГИС</a>
             </div>
         </div>
-        <p><strong>Телефон:</strong><br><a href="tel:+79322532650" class="contact-link">+7 932 253-26-50</a></p>
+        <p style="font-size: 18px;"><strong>Телефон:</strong><br><a href="tel:+79322532650" class="contact-link">+7 932 253-26-50</a></p>
         
         <a href="https://vk.ru/chechina.tatyana" class="contact-link" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
 
