@@ -40,6 +40,10 @@
             font-size: 18px;
             margin-top: 20px;
             font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #9e6b77;
         }
         ul {
             list-style: none;
@@ -103,6 +107,15 @@
             margin: 15px auto;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
+        .address img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .map-buttons {
             margin-top: 12px;
             display: flex;
@@ -117,6 +130,10 @@
             border-radius: 20px;
             font-size: 13px;
             font-weight: bold;
+            transition: opacity 0.3s ease;
+        }
+        .map-btn:hover {
+            opacity: 0.8;
         }
         .disclaimer {
             font-size: 12px;
@@ -177,6 +194,7 @@
 
     <h2>Контакты</h2>
     <div class="address">
+        <img src="vhod.jpg" alt="Вход в салон — ул. Демократическая 38А, ТЦ «Август»">
         <p style="margin-top: 0;"><strong>Адрес (Адлер):</strong><br>ул. Демократическая 38А,<br>7 кабинет, 4 этаж</p>
         <div class="map-buttons">
             <a href="https://yandex.ru/maps/239/sochi/?ll=39.924583%2C43.424300&mode=routes&rtext=~43.424010%2C39.924788&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D170297749655&z=17.97" target="_blank" rel="noopener noreferrer" class="map-btn" style="background: #fc3f1d;">📍 Яндекс.Карты</a>
@@ -184,9 +202,9 @@
         </div>
     </div>
     <p><strong>Телефон:</strong><br><a href="tel:+79322532650" class="contact-link">+7 932 253-26-50</a></p>
-    <!-- ЗАМЕНИТЬ: вставить ссылку на профиль/сообщество ВКонтакте -->
+    
+    <!-- Ссылки на соцсети (пока ведут на главные страницы) -->
     <a href="https://vk.ru" class="contact-link" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
-    <!-- ЗАМЕНИТЬ: вставить ссылку-приглашение в чат MAX (чат → название → Пригласить по ссылке) -->
     <a href="https://max.ru" class="contact-link" target="_blank" rel="noopener noreferrer">MAX (чат)</a>
 
     <footer>
