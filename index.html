@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Чечина Татьяна — наращивание ресниц, брови, татуаж | Адлер</title>
+    <title>Чечина Татьяна — наращивание ресниц, брови, перманентный макияж | Адлер</title>
     <style>
-  
-         body { 
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            background-color: #121212; /* Темный фон */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+        body { 
+            font-family: 'Oswald', sans-serif; 
+            background-color: #121212; 
             color: #e0e0e0; 
             margin: 0; 
             padding: 0; 
             text-align: center; 
             line-height: 1.6; 
         }
-
-        /* Шапка */
+        
         .hero {
             position: relative;
             width: 100%;
@@ -46,19 +46,16 @@
             padding: 20px;
         }
 
-                /* Заголовки */
         h1, h2, h3 { 
-            font-family: Georgia, 'Times New Roman', serif;
-            color: #d4af37; /* Золотистый цвет */
+            font-family: 'Playfair Display', serif; 
+            color: #d4af37; 
             margin-bottom: 10px;
         }
-
         
         .hero h1 { font-size: 48px; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 2px; }
         .hero .subtitle-big { font-size: 24px; font-style: italic; color: #fff; margin-bottom: 15px; }
         .hero p { font-size: 18px; margin: 5px 0; color: #e0e0e0; text-transform: uppercase; letter-spacing: 1px;}
 
-        /* Контейнер */
         .container { padding: 40px 20px; max-width: 900px; margin: 0 auto; }
         
         h2 { 
@@ -70,7 +67,6 @@
             text-transform: uppercase;
         }
         
-        /* Блок услуг */
         .services-grid {
             display: flex;
             flex-wrap: wrap;
@@ -78,7 +74,7 @@
             align-items: center;
             gap: 40px;
             margin: 40px auto 0;
-            background: #1e1e1e; /* Темно-серый блок */
+            background: #1e1e1e; 
             padding: 30px;
             border-radius: 15px;
             border: 1px solid #333;
@@ -87,46 +83,13 @@
             max-width: 800px;
         }
 
-     /* Свайп-карусель фото и видео */
-     .services-carousel {
-         flex: 1;
-         min-width: 240px;
-         max-width: 300px;
-         margin: 0 auto;
-     }
-     .carousel-track {
-         display: flex;
-         overflow-x: auto;
-         scroll-snap-type: x mandatory;
-         scroll-behavior: smooth;
-         gap: 12px;
-         border-radius: 15px;
-         border: 3px solid #d4af37;
-         background: #121212;
-         scrollbar-width: none;
-     }
-     .carousel-track::-webkit-scrollbar {
-         display: none;
-     }
-     .carousel-slide {
-         flex: 0 0 100%;
-         width: 100%;
-         height: 340px;
-         scroll-snap-align: center;
-     }
-     .carousel-slide img,
-     .carousel-slide video {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         display: block;
-     }
-     .carousel-hint {
-         font-size: 13px;
-         color: #d4af37;
-         text-align: center;
-         margin-top: 8px;
-     }
+        .services-image { flex: 1; min-width: 250px; max-width: 300px; text-align: center; }
+        .services-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 4px solid #d4af37; 
+        }
 
         .services-list { flex: 1.5; min-width: 300px; }
         .services-list h2 { margin-top: 0; border-bottom: none; text-align: left; }
@@ -143,7 +106,6 @@
         .services-list li:last-child { border-bottom: none; }
         .services-list .price { font-weight: bold; color: #d4af37; font-size: 20px; }
 
-        /* Кнопки */
         .btn { 
             display: inline-block; 
             padding: 15px 40px; 
@@ -164,7 +126,6 @@
         .btn-vk { border-color: #4a76a8; color: #4a76a8; }
         .btn-vk:hover { background-color: #4a76a8; color: #fff; }
 
-        /* Отзывы */
         .review { 
             background: #1e1e1e; 
             padding: 25px; 
@@ -177,7 +138,6 @@
         }
         .review-name { font-weight: bold; color: #d4af37; font-size: 18px; margin-top: 0; }
         
-        /* Контакты */
         .address { 
             background: #1e1e1e; 
             padding: 30px; 
@@ -215,54 +175,27 @@
             background: #0a0a0a;
         }
         
-        /* Галерея */
         .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; max-width: 700px; margin: 20px auto; }
         .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; border: 1px solid #333; transition: transform 0.3s; }
         .gallery img:hover { transform: scale(1.05); border-color: #d4af37; }
 
-        /* Адаптив */
-     @media (max-width: 700px) {
-         .hero { height: 350px; }
-         .hero h1 { font-size: 32px; }
-         .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
-         .services-list h2 { text-align: center; }
-         .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
-         .services-carousel { max-width: 260px; margin: 0 auto; }
-     }
-/* Кнопки-стрелки карусели */
-.carousel-wrapper { position: relative; }
-.carousel-btn {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    background: rgba(18, 18, 18, 0.8); color: #d4af37;
-    border: 1px solid #d4af37; border-radius: 50%;
-    width: 36px; height: 36px; font-size: 22px; line-height: 1;
-    cursor: pointer; display: flex; align-items: center; justify-content: center;
-    z-index: 5; transition: all 0.3s ease; padding: 0 0 2px 0;
-}
-.carousel-btn:hover { background: #d4af37; color: #121212; }
-.carousel-btn.prev { left: 8px; }
-.carousel-btn.next { right: 8px; }
-
-/* Лайтбокс (фото на весь экран) */
-.gallery img { cursor: zoom-in; }
-.lightbox {
-    display: none; position: fixed; z-index: 1000; top: 0; left: 0;
-    width: 100%; height: 100%; background: rgba(0, 0, 0, 0.92);
-    justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;
-}
-.lightbox.active { display: flex; }
-.lightbox img { max-width: 95%; max-height: 90vh; border-radius: 10px; border: 2px solid #d4af37; object-fit: contain; }
-.lightbox-close { position: absolute; top: 20px; right: 25px; color: #d4af37; font-size: 42px; font-weight: bold; cursor: pointer; line-height: 1; }
+        @media (max-width: 700px) {
+            .hero { height: 350px; }
+            .hero h1 { font-size: 32px; }
+            .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
+            .services-list h2 { text-align: center; }
+            .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
+            .services-image { max-width: 200px; margin: 0 auto; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ШАПКА -->
     <header class="hero">
         <div class="hero-content">
             <h1>Чечина Татьяна</h1>
             <p class="subtitle-big">Топ-мастер и тренер</p>
-            <p>РЕСНИЦЫ • БРОВИ • КОСМЕТИЧЕСКИЙ ТАТУАЖ</p>
+            <p>РЕСНИЦЫ • БРОВИ • ПЕРМАНЕНТНЫЙ МАКИЯЖ</p>
             <p>ОБУЧЕНИЕ</p>
             <p style="margin-top: 15px; font-size: 16px; color: #d4af37;">📍 АДЛЕР / НИЖНЕВАРТОВСК</p>
         </div>
@@ -270,30 +203,10 @@
 
     <div class="container">
         
-        <!-- УСЛУГИ -->
         <div class="services-grid">
-            <div class="services-carousel">
-                <div class="carousel-wrapper">
-                    <button class="carousel-btn prev" type="button" onclick="scrollCarousel(-1)">‹</button>
-                    <div class="carousel-track" id="carouselTrack">
-                        <div class="carousel-slide">
-                            <img src="slide1.jpg" alt="Чечина Татьяна">
-                        </div>
-                        <div class="carousel-slide">
-                            <video src="slide2.mp4" poster="1.jpg" controls playsinline muted preload="metadata"></video>
-                        </div>
-                        <div class="carousel-slide">
-                            <video src="slide3.mp4" poster="2.jpg" controls playsinline muted preload="metadata"></video>
-                        </div>
-                        <div class="carousel-slide">
-                            <video src="slide4.mp4" poster="3.jpg" controls playsinline muted preload="metadata"></video>
-                        </div>
-                    </div>
-                    <button class="carousel-btn next" type="button" onclick="scrollCarousel(1)">›</button>
-                </div>
-                <div class="carousel-hint">👈 Листайте фото и видео пальцем 👉</div>
+            <div class="services-image">
+                <img src="avatar.jpg" alt="Чечина Татьяна">
             </div>
-
             <div class="services-list">
                 <h2>Услуги и цены</h2>
                 <ul>
@@ -301,7 +214,7 @@
                     <li>2D наращивание <span class="price">3000 ₽</span></li>
                     <li>3D наращивание <span class="price">3300 ₽</span></li>
                     <li>Коррекция бровей <span class="price">от 600 ₽</span></li>
-                    <li>Косметический татуаж <span class="price">7000 ₽</span></li>
+                    <li>Перманентный макияж <span class="price">7000 ₽</span></li>
                 </ul>
             </div>
         </div>
@@ -309,12 +222,10 @@
             * Указанные цены носят ознакомительный характер и не являются публичной офертой (ст. 437 ГК РФ). Услуги носят эстетический (бытовой) характер и не являются медицинскими.
         </p>
 
-        <!-- ЗАПИСЬ -->
         <h2>Записаться онлайн</h2>
         <p>Выберите удобное время — это займёт минуту.</p>
         <a href="https://dikidi.net/ru/profile/chechina_tatyana_316741/" class="btn" target="_blank" rel="noopener noreferrer">Записаться</a>
 
-        <!-- РАБОТЫ -->
         <h2>Мои работы</h2>
         <p>Посмотрите мои последние работы и результаты преображений.</p>
         
@@ -331,7 +242,6 @@
 
         <a href="https://vk.ru/clips/chechina.tatyana" class="btn btn-vk" target="_blank" rel="noopener noreferrer" style="margin-top: 20px;">Смотреть все работы</a>
 
-        <!-- ОТЗЫВЫ -->
         <h2>Отзывы</h2>
         <div class="review">
             <p class="review-name">Наталья</p>
@@ -346,11 +256,9 @@
             <p>Профессионал своего дела!</p>
         </div>
 
-        <!-- ГРАФИК -->
         <h2>График работы</h2>
         <p style="font-size: 20px; color: #fff;">Ежедневно с 10:00 до 21:00</p>
 
-        <!-- КОНТАКТЫ -->
         <h2>Контакты</h2>
         <div class="address">
             <img src="Vhod.png" alt="Вход в салон — ул. Демократическая 38А, ТЦ «Август»">
@@ -373,31 +281,6 @@
             </p>
         </footer>
     </div>
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-    <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
-    <img id="lightboxImg" src="" alt="Увеличенное фото работы">
-</div>
-
-<script>
-    function scrollCarousel(direction) {
-        const track = document.getElementById('carouselTrack');
-        track.scrollBy({ left: direction * (track.clientWidth + 12), behavior: 'smooth' });
-    }
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    document.querySelectorAll('.gallery img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightbox.classList.add('active');
-        });
-    });
-    function closeLightbox(e) {
-        if (e.target !== lightboxImg) lightbox.classList.remove('active');
-    }
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') lightbox.classList.remove('active');
-    });
-</script>
 
 </body>
 </html>
