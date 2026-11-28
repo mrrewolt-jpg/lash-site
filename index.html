@@ -20,10 +20,10 @@
         .hero {
             position: relative;
             width: 100%;
-            height: 400px; /* Уменьшили высоту */
-            background-image: url('avatar.jpg');
+            height: 400px; 
+            background-image: url('avatar.jpg'); /* Фото для шапки */
             background-size: cover;
-            background-position: center 30%; /* Сдвинули картинку, чтобы лицо было по центру */
+            background-position: center 30%; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -89,6 +89,8 @@
             height: auto;
             border-radius: 50%;
             border: 4px solid #d4af37; 
+            object-fit: cover;
+            aspect-ratio: 1 / 1; 
         }
 
         .services-list { flex: 1.5; min-width: 300px; }
@@ -205,7 +207,8 @@
         
         <div class="services-grid">
             <div class="services-image">
-                <img src="avatar.jpg" alt="Чечина Татьяна">
+                <!-- Здесь твое новое фото для кружка слева -->
+                <img src="uslugi.jpg" alt="Услуги и работы">
             </div>
             <div class="services-list">
                 <h2>Услуги и цены</h2>
