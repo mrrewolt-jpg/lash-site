@@ -21,7 +21,7 @@
             position: relative;
             width: 100%;
             height: 400px; 
-            background-image: url('avatar.jpg'); /* Фото для шапки */
+            background-image: url('avatar.jpg'); 
             background-size: cover;
             background-position: center 30%; 
             display: flex;
@@ -184,6 +184,7 @@
         @media (max-width: 700px) {
             .hero { height: 350px; }
             .hero h1 { font-size: 32px; }
+            .hero p { font-size: 14px; } /* Чуть уменьшили текст на телефонах, чтобы влезло */
             .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
             .services-list h2 { text-align: center; }
             .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
@@ -198,7 +199,8 @@
             <h1>Чечина Татьяна</h1>
             <p class="subtitle-big">Топ-мастер и тренер</p>
             <p>РЕСНИЦЫ • БРОВИ • ПЕРМАНЕНТНЫЙ МАКИЯЖ</p>
-            <p>ОБУЧЕНИЕ</p>
+            <!-- Вот здесь изменили текст: -->
+            <p>ОБУЧЕНИЕ НАРАЩИВАНИЮ РЕСНИЦ И ОФОРМЛЕНИЮ БРОВЕЙ</p>
             <p style="margin-top: 15px; font-size: 16px; color: #d4af37;">📍 АДЛЕР / НИЖНЕВАРТОВСК</p>
         </div>
     </header>
@@ -207,7 +209,6 @@
         
         <div class="services-grid">
             <div class="services-image">
-                <!-- Здесь твое новое фото для кружка слева -->
                 <img src="uslugi.jpg" alt="Услуги и работы">
             </div>
             <div class="services-list">
