@@ -87,7 +87,7 @@
         .services-image img {
             width: 100%;
             height: auto;
-            border-radius: 50%; /* ВЕРНУЛИ КРУГ */
+            border-radius: 50%; 
             border: 4px solid #d4af37; 
             object-fit: cover;
             aspect-ratio: 1 / 1; 
@@ -176,10 +176,62 @@
             line-height: 1.5; 
             background: #0a0a0a;
         }
-        
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; max-width: 700px; margin: 20px auto; }
-        .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; border: 1px solid #333; transition: transform 0.3s; }
-        .gallery img:hover { transform: scale(1.05); border-color: #d4af37; }
+
+        /* --- СТИЛИ ДЛЯ КАРУСЕЛИ --- */
+        .carousel-container {
+            position: relative;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .gallery-carousel {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; /* Плавный свайп на iOS */
+            padding-bottom: 15px; /* Место для скроллбара */
+            scrollbar-width: thin; /* Тонкий скроллбар в Firefox */
+            scrollbar-color: #d4af37 #1e1e1e;
+        }
+
+        /* Стилизация скроллбара для Chrome/Safari/Edge */
+        .gallery-carousel::-webkit-scrollbar {
+            height: 6px;
+        }
+        .gallery-carousel::-webkit-scrollbar-track {
+            background: #1e1e1e;
+            border-radius: 10px;
+        }
+        .gallery-carousel::-webkit-scrollbar-thumb {
+            background-color: #d4af37;
+            border-radius: 10px;
+        }
+
+        .gallery-carousel img {
+            flex: 0 0 calc(33.333% - 10px); /* По 3 фото на ПК */
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #333;
+            scroll-snap-align: start; /* Остановка ровно по фото */
+            transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-carousel img:hover {
+            transform: scale(1.03);
+            border-color: #d4af37;
+        }
+
+        /* Адаптив для карусели (на телефоне по 1 фото) */
+        @media (max-width: 700px) {
+            .gallery-carousel img {
+                flex: 0 0 100%; /* По 1 фото на телефоне */
+                height: 250px;
+            }
+        }
+        /* -------------------------- */
 
         @media (max-width: 700px) {
             .hero { height: 350px; }
@@ -208,7 +260,6 @@
         
         <div class="services-grid">
             <div class="services-image">
-                <!-- Фото вернулось в круглую рамку -->
                 <img src="uslugi.jpg" alt="Услуги и работы">
             </div>
             <div class="services-list">
@@ -233,19 +284,22 @@
         <h2>Мои работы</h2>
         <p>Посмотрите мои последние работы и результаты преображений.</p>
         
-        <div class="gallery">
-            <img src="1.jpg" alt="Работа 1">
-            <img src="2.jpg" alt="Работа 2">
-            <img src="3.jpg" alt="Работа 3">
-            <img src="4.jpg" alt="Работа 4">
-            <img src="5.jpg" alt="Работа 5">
-            <img src="6.jpg" alt="Работа 6">
-            <img src="7.jpg" alt="Работа 7">
-            <img src="8.jpg" alt="Работа 8">
-            <img src="9.jpg" alt="Работа 9"> <!-- ДОБАВИЛИ 9 ФОТО -->
+        <!-- НОВАЯ КАРУСЕЛЬ -->
+        <div class="carousel-container">
+            <div class="gallery-carousel">
+                <img src="1.jpg" alt="Работа 1">
+                <img src="2.jpg" alt="Работа 2">
+                <img src="3.jpg" alt="Работа 3">
+                <img src="4.jpg" alt="Работа 4">
+                <img src="5.jpg" alt="Работа 5">
+                <img src="6.jpg" alt="Работа 6">
+                <img src="7.jpg" alt="Работа 7">
+                <img src="8.jpg" alt="Работа 8">
+                <img src="9.jpg" alt="Работа 9">
+            </div>
         </div>
 
-        <a href="https://vk.ru/clips/chechina.tatyana" class="btn btn-vk" target="_blank" rel="noopener noreferrer" style="margin-top: 20px;">Смотреть все работы</a>
+        <a href="https://vk.ru/clips/chechina.tatyana" class="btn btn-vk" target="_blank" rel="noopener noreferrer" style="margin-top: 10px;">Смотреть все работы</a>
 
         <h2>Отзывы</h2>
         <div class="review">
