@@ -15,12 +15,13 @@
             padding: 0; 
             text-align: center; 
             line-height: 1.6; 
+            overflow-x: hidden;
         }
         
         .hero {
             position: relative;
             width: 100%;
-            height: 400px; 
+            min-height: 400px; 
             background-image: url('avatar.jpg'); 
             background-size: cover;
             background-position: center 30%; 
@@ -30,6 +31,9 @@
             align-items: center;
             color: white;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+            padding: 40px 20px; 
+            box-sizing: border-box;
+            margin-bottom: 50px;
         }
         
         .hero::before {
@@ -43,7 +47,6 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 20px;
         }
 
         h1, h2, h3 { 
@@ -67,6 +70,20 @@
             text-transform: uppercase;
         }
         
+        .booking-text {
+            margin-bottom: 30px; 
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .booking-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; 
+            margin-bottom: 20px;
+        }
+
         .services-grid {
             display: flex;
             flex-wrap: wrap;
@@ -110,18 +127,18 @@
 
         .btn { 
             display: inline-block; 
-            padding: 15px 40px; 
+            padding: 15px 30px; 
             background-color: transparent; 
             color: #d4af37; 
             border: 2px solid #d4af37;
             text-decoration: none; 
             border-radius: 30px; 
-            font-size: 18px; 
-            margin-top: 20px; 
+            font-size: 16px; 
             font-weight: bold; 
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease; 
+            white-space: nowrap;
         }
         .btn:hover { background-color: #d4af37; color: #121212; }
         
@@ -198,13 +215,23 @@
         }
 
         @media (max-width: 700px) {
-            .hero { height: 350px; }
-            .hero h1 { font-size: 32px; }
+            .hero { 
+                min-height: auto; 
+                padding: 30px 15px; 
+                margin-bottom: 30px; 
+            }
+            .hero h1 { font-size: 28px; letter-spacing: 1px; }
+            .hero .subtitle-big { font-size: 20px; }
             .hero p { font-size: 14px; } 
+            .hero p[style] { font-size: 14px !important; margin-top: 10px !important; white-space: nowrap; }
+            
             .services-grid { flex-direction: column; padding: 15px; gap: 20px; }
             .services-list h2 { text-align: center; }
             .services-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
             .services-image { max-width: 200px; margin: 0 auto; }
+            
+            .btn { padding: 12px 20px; font-size: 14px; width: 100%; box-sizing: border-box; }
+            .booking-buttons { gap: 10px; }
         }
     </style>
 </head>
@@ -242,8 +269,13 @@
         </p>
 
         <h2>Записаться онлайн</h2>
-        <p>Выберите удобное время — это займёт минуту.</p>
-        <a href="https://dikidi.net/ru/profile/chechina_tatyana_316741/" class="btn" target="_blank" rel="noopener noreferrer">Записаться</a>
+        <p class="booking-text">Выберите город и удобное время — это займёт минуту.</p>
+        
+        <!-- ДВЕ КНОПКИ С РАЗНЫМИ ССЫЛКАМИ -->
+        <div class="booking-buttons">
+            <a href="https://dikidi.net/ru/profile/chechina_tatyana_316741/" class="btn" target="_blank" rel="noopener noreferrer">Записаться (Адлер)</a>
+            <a href="https://dikidi.ru/413331" class="btn" target="_blank" rel="noopener noreferrer">Записаться (Нижневартовск)</a>
+        </div>
 
         <h2>Мои работы</h2>
         <p>Посмотрите мои последние работы и результаты преображений.</p>
@@ -256,11 +288,9 @@
             <img src="5.jpg" alt="Работа 5">
             <img src="6.jpg" alt="Работа 6">
             <img src="7.jpg" alt="Работа 7">
-            <!-- 8.jpg удалено -->
             <img src="9.jpg" alt="Работа 9">
         </div>
 
-        <!-- Кнопка «Смотреть все работы» теперь тоже ведет на новую группу ВК -->
         <a href="https://vk.ru/club237803568" class="btn btn-vk" target="_blank" rel="noopener noreferrer" style="margin-top: 10px;">Смотреть все работы</a>
 
         <h2>Отзывы</h2>
@@ -291,7 +321,6 @@
         </div>
         <p style="font-size: 18px;"><strong>Телефон:</strong><br><a href="tel:+79322532650" class="contact-link">+7 932 253-26-50</a></p>
         
-        <!-- НОВАЯ ССЫЛКА НА ВК В КОНТАКТАХ -->
         <a href="https://vk.ru/club237803568" class="contact-link" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
 
         <footer>
