@@ -189,13 +189,12 @@
             gap: 15px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch; /* Плавный свайп на iOS */
-            padding-bottom: 15px; /* Место для скроллбара */
-            scrollbar-width: thin; /* Тонкий скроллбар в Firefox */
+            -webkit-overflow-scrolling: touch; 
+            padding-bottom: 15px; 
+            scrollbar-width: thin; 
             scrollbar-color: #d4af37 #1e1e1e;
         }
 
-        /* Стилизация скроллбара для Chrome/Safari/Edge */
         .gallery-carousel::-webkit-scrollbar {
             height: 6px;
         }
@@ -209,12 +208,12 @@
         }
 
         .gallery-carousel img {
-            flex: 0 0 calc(33.333% - 10px); /* По 3 фото на ПК */
+            flex: 0 0 calc(33.333% - 10px); 
             height: 220px;
             object-fit: cover;
             border-radius: 10px;
             border: 1px solid #333;
-            scroll-snap-align: start; /* Остановка ровно по фото */
+            scroll-snap-align: start; 
             transition: transform 0.3s, border-color 0.3s;
             cursor: pointer;
         }
@@ -224,10 +223,9 @@
             border-color: #d4af37;
         }
 
-        /* Адаптив для карусели (на телефоне по 1 фото) */
         @media (max-width: 700px) {
             .gallery-carousel img {
-                flex: 0 0 100%; /* По 1 фото на телефоне */
+                flex: 0 0 100%; 
                 height: 250px;
             }
         }
@@ -284,7 +282,7 @@
         <h2>Мои работы</h2>
         <p>Посмотрите мои последние работы и результаты преображений.</p>
         
-        <!-- НОВАЯ КАРУСЕЛЬ -->
+        <!-- КАРУСЕЛЬ (8-е фото убрано) -->
         <div class="carousel-container">
             <div class="gallery-carousel">
                 <img src="1.jpg" alt="Работа 1">
@@ -294,7 +292,7 @@
                 <img src="5.jpg" alt="Работа 5">
                 <img src="6.jpg" alt="Работа 6">
                 <img src="7.jpg" alt="Работа 7">
-                <img src="8.jpg" alt="Работа 8">
+                <!-- 8.jpg удалено -->
                 <img src="9.jpg" alt="Работа 9">
             </div>
         </div>
